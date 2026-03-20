@@ -45,3 +45,23 @@ CREATE TABLE IF NOT EXISTS pets (
     CONSTRAINT fk_pets_owner FOREIGN KEY (owner_id)
         REFERENCES users(user_id) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- ============================================================
+-- APPOINTMENTS TABLE
+-- ============================================================
+CREATE TABLE IF NOT EXISTS appointments (
+    id               BIGINT       NOT NULL AUTO_INCREMENT,
+    user_id          BIGINT       NOT NULL,
+    pet_id           BIGINT       NOT NULL,
+    appointment_type VARCHAR(100),
+    doctor           VARCHAR(100),
+    date             VARCHAR(50),
+    time_slot        VARCHAR(50),
+    price            DOUBLE,
+    notes            TEXT,
+    PRIMARY KEY (id),
+    CONSTRAINT fk_appointments_user FOREIGN KEY (user_id)
+        REFERENCES users(user_id) ON DELETE CASCADE,
+    CONSTRAINT fk_appointments_pet FOREIGN KEY (pet_id)
+        REFERENCES pets(pet_id) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import OwnerSidebar from '../components/owner/OwnerSidebar';
 import MyPets from '../components/owner/MyPets';
+import ViewTimeSlots from './ViewTimeSlots';
 import '../styles/Dashboard.css';
 import useCurrentUser from '../hooks/useCurrentUser';
 
@@ -53,9 +54,9 @@ const Dashboard = () => {
     const [activeTab, setActiveTab] = useState('my-pets');
     const user = useCurrentUser();
 
-    // ── Content renderer ───────────────────────────────────────────
     const renderContent = () => {
         if (activeTab === 'my-pets') return <MyPets />;
+        if (activeTab === 'doctor-channeling') return <ViewTimeSlots />;
         return <ComingSoon tabKey={activeTab} />;
     };
 

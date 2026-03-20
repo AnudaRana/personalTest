@@ -1,6 +1,6 @@
 /* ── Staff Sidebar — deep navy-blue theme ──────────────── */
 .staff-sidebar {
-  background: linear-gradient(180deg, #0C1A3A 0%, #0F2459 100%);
+  background: linear-gradient(180deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
 }
 
 .staff-sidebar-role-badge {
@@ -9,10 +9,10 @@
   gap: 8px;
   margin: 0 16px 12px;
   padding: 8px 14px;
-  background: rgba(37, 99, 235, 0.12);
-  border: 1px solid rgba(37, 99, 235, 0.25);
+  background: var(--color-sidebar-active-bg);
+  border: 1px solid rgba(0, 240, 255, 0.25);
   border-radius: 10px;
-  color: #93C5FD;
+  color: var(--color-accent-light);
   font-size: 0.78rem;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -20,37 +20,37 @@
 }
 
 .staff-user-avatar {
-  background: linear-gradient(135deg, #2563EB, #1E40AF) !important;
-  box-shadow: 0 2px 10px rgba(37, 99, 235, 0.35) !important;
+  background: linear-gradient(135deg, var(--color-accent), var(--color-accent-dark)) !important;
+  box-shadow: 0 2px 10px rgba(0, 240, 255, 0.35) !important;
 }
 
 /* Override nav active state for staff navy-blue */
 .staff-sidebar .nav-item.active {
-  background: rgba(37, 99, 235, 0.12);
-  border-color: rgba(37, 99, 235, 0.2);
+  background: var(--color-sidebar-active-bg);
+  border-color: rgba(0, 240, 255, 0.2);
 }
 
 .staff-sidebar .nav-item.active .nav-item-icon,
 .staff-sidebar .nav-item:not(.nav-item--disabled):hover .nav-item-icon {
-  color: #2563EB;
+  color: var(--color-accent);
 }
 
 .staff-sidebar .nav-indicator-dot {
-  background: #3B82F6;
-  box-shadow: 0 0 8px #3B82F6;
+  background: var(--color-accent);
+  box-shadow: 0 0 8px var(--color-accent);
 }
 
 .staff-sidebar .sidebar-decor-tr {
-  background: radial-gradient(circle, rgba(37, 99, 235, 0.15) 0%, rgba(37, 99, 235, 0) 70%);
+  background: radial-gradient(circle, rgba(0, 240, 255, 0.15) 0%, rgba(0, 240, 255, 0) 70%);
 }
 
 .staff-sidebar .sidebar-decor-bl {
-  background: radial-gradient(circle, rgba(37, 99, 235, 0.08) 0%, rgba(37, 99, 235, 0) 70%);
+  background: radial-gradient(circle, rgba(0, 240, 255, 0.08) 0%, rgba(0, 240, 255, 0) 70%);
 }
 
 /* ── Staff avatar in topbar ────────────────────────────── */
 .staff-avatar {
-  background: linear-gradient(135deg, #2563EB, #1E40AF) !important;
+  background: linear-gradient(135deg, var(--color-accent), var(--color-accent-dark)) !important;
 }
 
 /* ── Full page loading ─────────────────────────────────── */
@@ -67,8 +67,8 @@
 .staff-spinner {
   width: 44px;
   height: 44px;
-  border: 4px solid rgba(37, 99, 235, 0.2);
-  border-top-color: #2563EB;
+  border: 4px solid rgba(0, 240, 255, 0.2);
+  border-top-color: var(--color-accent);
   border-radius: 50%;
   animation: spin 0.8s linear infinite;
 }
@@ -112,10 +112,10 @@
   align-items: center;
   gap: 8px;
   padding: 8px 20px;
-  background: rgba(37, 99, 235, 0.1);
-  border: 1.5px solid rgba(37, 99, 235, 0.3);
+  background: rgba(0, 240, 255, 0.1);
+  border: 1.5px solid rgba(0, 240, 255, 0.3);
   border-radius: 20px;
-  color: #1E40AF;
+  color: var(--color-accent-dark);
   font-weight: 700;
   font-size: 0.85rem;
   white-space: nowrap;
@@ -134,7 +134,7 @@
   border-radius: 14px;
   padding: 20px 22px;
   box-shadow: 0 2px 12px rgba(10, 15, 36, 0.07);
-  border-top: 3px solid var(--accent, #2563EB);
+  border-top: 3px solid var(--accent, var(--color-accent));
   transition: transform 0.18s, box-shadow 0.18s;
 }
 
@@ -151,7 +151,7 @@
 .staff-stat-value {
   font-size: 2rem;
   font-weight: 800;
-  color: var(--accent, #2563EB);
+  color: var(--accent, var(--color-accent));
   font-family: 'Playfair Display', serif;
   line-height: 1;
 }
@@ -174,7 +174,7 @@
   border-radius: 14px;
   padding: 20px 22px;
   box-shadow: 0 2px 12px rgba(62, 64, 149, 0.07);
-  border-top: 3px solid var(--accent, #2563EB);
+  border-top: 3px solid var(--accent, var(--color-accent));
 }
 
 /* ── Quick Actions ─────────────────────────────────────── */
@@ -210,10 +210,10 @@
 }
 
 .staff-action-card:hover {
-  border-color: #2563EB;
-  background: rgba(37, 99, 235, 0.04);
+  border-color: var(--color-accent);
+  background: rgba(0, 240, 255, 0.04);
   transform: translateY(-2px);
-  box-shadow: 0 4px 16px rgba(37, 99, 235, 0.12);
+  box-shadow: 0 4px 16px rgba(0, 240, 255, 0.12);
 }
 
 .staff-action-icon {
@@ -229,7 +229,7 @@
 }
 
 .staff-action-arrow {
-  color: #2563EB;
+  color: var(--color-accent);
   font-size: 1rem;
   font-weight: 700;
   opacity: 0;
@@ -254,11 +254,11 @@
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  background: linear-gradient(135deg, rgba(37, 99, 235, 0.18), rgba(30, 64, 175, 0.18));
+  background: linear-gradient(135deg, rgba(0, 240, 255, 0.18), rgba(0, 184, 196, 0.18));
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #2563EB;
+  color: var(--color-accent);
 }
 
 .staff-coming-soon h2 {
@@ -278,7 +278,7 @@
 }
 
 .staff-coming-badge {
-  background: linear-gradient(90deg, #2563EB, #1E40AF);
+  background: linear-gradient(90deg, var(--color-accent), var(--color-accent-dark));
   color: white;
   padding: 6px 18px;
   border-radius: 20px;
@@ -325,7 +325,7 @@
 }
 
 .staff-pets-table-row:hover {
-  background: rgba(37, 99, 235, 0.04);
+  background: rgba(0, 240, 255, 0.04);
 }
 
 .staff-pet-name-cell {
@@ -338,7 +338,7 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #0C1A3A, #2563EB);
+  background: linear-gradient(135deg, var(--color-primary-dark), var(--color-accent));
   display: flex;
   align-items: center;
   justify-content: center;
@@ -358,9 +358,9 @@
 
 .staff-view-btn {
   padding: 6px 14px;
-  background: rgba(37, 99, 235, 0.1);
-  color: #1E40AF;
-  border: 1.5px solid rgba(37, 99, 235, 0.3);
+  background: rgba(0, 240, 255, 0.1);
+  color: var(--color-accent-dark);
+  border: 1.5px solid rgba(0, 240, 255, 0.3);
   border-radius: 8px;
   font-size: 0.78rem;
   font-weight: 700;
@@ -371,9 +371,9 @@
 }
 
 .staff-view-btn:hover {
-  background: #2563EB;
+  background: var(--color-accent);
   color: white;
-  border-color: #2563EB;
+  border-color: var(--color-accent);
 }
 
 /* ── Staff Pet Detail ──────────────────────────────────── */
@@ -382,7 +382,7 @@
 }
 
 .staff-pet-detail-header {
-  background: linear-gradient(135deg, #0C1A3A, #1E40AF) !important;
+  background: linear-gradient(135deg, var(--color-primary-dark), var(--color-accent-dark)) !important;
 }
 
 .staff-owner-info-card {
@@ -399,7 +399,7 @@
 .staff-owner-info-label {
   font-size: 0.72rem;
   font-weight: 700;
-  color: #1E40AF;
+  color: var(--color-accent-dark);
   text-transform: uppercase;
   letter-spacing: 0.08em;
 }
@@ -463,9 +463,9 @@
 
 /* ── Book Appointment button ───────────────────────────── */
 .staff-book-btn {
-  background: rgba(37, 99, 235, 0.1) !important;
-  color: #1E40AF !important;
-  border: 1.5px solid rgba(37, 99, 235, 0.3) !important;
+  background: rgba(0, 240, 255, 0.1) !important;
+  color: var(--color-accent-dark) !important;
+  border: 1.5px solid rgba(0, 240, 255, 0.3) !important;
   opacity: 0.5;
   cursor: not-allowed !important;
 }

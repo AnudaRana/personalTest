@@ -85,7 +85,7 @@ const NAV_ITEMS = [
     { key: 'store', icon: <StoreIcon />, label: 'Store', clickable: false },
     { key: 'my-appointments', icon: <CalendarIcon />, label: 'My Appointments', clickable: false },
     { key: 'my-vaccinations', icon: <ShieldIcon />, label: 'My Vaccinations', clickable: false },
-    { key: 'doctor-channeling', icon: <StethoscopeIcon />, label: 'Doctor Channeling', clickable: false },
+    { key: 'doctor-channeling', icon: <StethoscopeIcon />, label: 'Doctor Channeling', clickable: true },
     { key: 'settings', icon: <SettingsIcon />, label: 'Settings', clickable: false },
 ];
 

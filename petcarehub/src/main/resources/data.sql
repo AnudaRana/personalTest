@@ -30,9 +30,9 @@ INSERT IGNORE INTO user_roles (user_id, role) VALUES
 
 INSERT IGNORE INTO users (user_id, first_name, last_name, mobile_number, password, email, enabled)
 VALUES
-(5, 'Nimal', 'Perera', '0776543210',
+(5, 'K.P.P', 'Kumara', '0776543210',
  '12345',
- 'dr.nimal@petcarehub.com', 1);
+ 'dr.Kumara@gmail.com', 1);
 
 INSERT IGNORE INTO user_roles (user_id, role) VALUES
 (5, 'VET');

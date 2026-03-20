@@ -36,7 +36,7 @@ public class AdminUserController {
             map.put("firstName", user.getFirstName());
             map.put("lastName", user.getLastName());
             map.put("email", user.getEmail());
-            map.put("roles", user.getRoles());   // <-- ADD THIS
+            map.put("roles", user.getRoles());
             return map;
         }).collect(Collectors.toList());
     }

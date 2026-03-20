@@ -17,16 +17,20 @@ const RoleBasedRedirect = () => {
 
 const App = () => (
   <Router future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
-    <Routes>
-      <Route path="/dashboard" element={<Dashboard />} />
-      <Route path="/doctor-dashboard" element={<DoctorDashboard />} />
-      <Route path="/staff-dashboard" element={<StaffDashboard />} />
-      {/* /login is handled by the login developer's separate page/app */}
-      {/* We still need this route so Navigate to="/login" doesn't 404 */}
-      <Route path="/login" element={<RoleBasedRedirect />} />
-      <Route path="/" element={<RoleBasedRedirect />} />
-      <Route path="*" element={<RoleBasedRedirect />} />
-    </Routes>
+    <div style={{ display: 'flex', height: '100vh' }}>
+      <div style={{ flex: 1, overflow: 'auto' }}>
+        <Routes>
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/doctor-dashboard" element={<DoctorDashboard />} />
+          <Route path="/staff-dashboard" element={<StaffDashboard />} />
+          {/* /login is handled by the login developer's separate page/app */}
+          {/* We still need this route so Navigate to="/login" doesn't 404 */}
+          <Route path="/login" element={<RoleBasedRedirect />} />
+          <Route path="/" element={<RoleBasedRedirect />} />
+          <Route path="*" element={<RoleBasedRedirect />} />
+        </Routes>
+      </div>
+    </div>
   </Router>
 );
 
